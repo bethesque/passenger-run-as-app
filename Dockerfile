@@ -5,7 +5,7 @@ RUN bash -lc 'rvm --default use ruby-2.4.5'
 ENV APP_HOME=/home/app/the_app/
 RUN rm -f /etc/service/nginx/down /etc/nginx/sites-enabled/default
 COPY container /
-USER app
+# USER app
 
 COPY --chown=app the_app/ $APP_HOME/
 RUN cd $APP_HOME && \

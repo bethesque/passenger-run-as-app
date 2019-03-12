@@ -1,2 +1,5 @@
 puts "Running app"
-run -> (env) { [200, {}, ["Hello world"]]}
+
+map "/" do
+  run -> (env) { [200, {}, ["Hello world"]]}
+end
